@@ -29,7 +29,7 @@ export class ComprarPage implements OnInit {
       return ref.where('id' ,'==',  id)
     });
     this.batido = this.itemsCollection.valueChanges()
-    console.log(this.batido);
+    // console.log(this.batido);
   }
 
   ngOnInit() {
