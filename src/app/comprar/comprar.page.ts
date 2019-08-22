@@ -25,11 +25,11 @@ export class ComprarPage implements OnInit {
   constructor(public _route: ActivatedRoute, private afs: AngularFirestore) { 
 
     let id = this._route.snapshot.paramMap.get('id')
-    this.itemsCollection = this.afs.collection<Btdo>('batidos', ref => {
+    this.itemsCollection = this.afs.collection('batidos', ref => {
       return ref.where('id' ,'==',  id)
     });
     this.batido = this.itemsCollection.valueChanges()
-    console.log(this.itemsCollection.valueChanges());
+    console.log(this.batido);
   }
 
   ngOnInit() {
