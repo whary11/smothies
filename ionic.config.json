@@ -1,5 +1,7 @@
 {
   "name": "snothies-finish",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

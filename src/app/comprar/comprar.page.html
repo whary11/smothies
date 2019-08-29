@@ -6,25 +6,11 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content >
-
-  <!-- <ion-row *ngFor="let item of batido | async">
-    <ion-col>
-        {{item.name}}
-
-      <img [src]="item.img" alt="" srcset="">
-
-    </ion-col>
-  </ion-row> -->
-
-
+<ion-content>
   <ion-toolbar>
     <ion-row class="ion-margin">
-
-      <img src="../../assets/vaso-reyma-8.png"  alt="" width="160px" class="smothie-img" />
-      <img src="../../assets/vaso-reyma-8.png"  alt="" width="160px" class="smothie-img" />
-
+      <img src="../../assets/vaso-reyma-8.png" alt="" width="160px" class="smothie-img" />
+      <img src="../../assets/vaso-reyma-8.png" alt="" width="160px" class="smothie-img" />
     </ion-row>
     <ion-row>
       <ion-col>
@@ -32,29 +18,28 @@
           <ion-label position="floating">
             Nombre y apellidos
           </ion-label>
-          <ion-input></ion-input>
+          <ion-input [(ngModel)]="datos.nombre"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Dirección</ion-label>
-          <ion-input></ion-input>
+          <ion-input [(ngModel)]="datos.direccion"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Teléfono</ion-label>
-          <ion-input></ion-input>
+          <ion-input [(ngModel)]="datos.telefono"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Email</ion-label>
-          <ion-input></ion-input>
+          <ion-input [(ngModel)]="datos.email"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Área de trabajo</ion-label>
-          <ion-input></ion-input>
+          <ion-input [(ngModel)]="datos.area"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
-    <ion-button expand="block" class="ion-margin">
+    <ion-button expand="block" class="ion-margin" (click)="addPedido()">
       Finalizar pedido
     </ion-button>
   </ion-toolbar>
-
 </ion-content>

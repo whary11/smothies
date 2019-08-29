@@ -29,7 +29,6 @@ export class Tab1Page {
     this.itemsCollection = this.afs.collection('batidos');
     this.items = this.itemsCollection.valueChanges();
     console.log(this.items);
-
   }
 
   
